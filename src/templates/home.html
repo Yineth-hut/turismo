@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% block title %}ZIP Turist{% endblock %}
+
+{% block customCSS %}
+
+     
+    <link rel="shortcut icon" href="assets/images/logoo.ico"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+      
+    <!-- Theme CSS -->  
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    
+{% endblock %}
+ {% block body %}
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">       
+            <h1 class="logo">
+                <a class="scrollto" href="#hero">
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="static/assets/images/zt.png" alt="icon"></span>
+                    <span class="text"><span class="highlight">ZIP Turist</span></span></a>
+            </h1><!--//logo-->
+            <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="active nav-link scrollto" href="#testimonials">A cerca</a></li>
+                                              
+                        <li class="nav-item"><a class="nav-link scrollto" href="#about">Tecnologias</a></li>
+                        
+                        
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->                     
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div id="hero" class="hero-section">
+        
+        <div id="hero-carousel" class="hero-carousel carousel carousel-fade slide" data-ride="carousel" data-interval="7000">
+            
+            <div class="figure-holder-wrapper">
+        		<div class="container">
+            		<div class="row justify-content-end">
+                		<div class="figure-holder">
+                	        <img class="figure-image img-fluid" src="static/assets/images/imac.png" alt="image" />
+                        </div><!--//figure-holder-->
+            		</div><!--//row-->
+        		</div><!--//container-->
+    		</div><!--//figure-holder-wrapper-->
+            
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
+				<li data-slide-to="1" data-target="#hero-carousel"></li>
+				<li data-slide-to="2" data-target="#hero-carousel"></li>
+			</ol>
+			
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+    			
+				<div class="carousel-item item-1 active">
+					<div class="item-content container">
+    					<div class="item-content-inner">
+				            <h2 class="heading"> <br class="d-none d-md-block">Zipaquirá Turistica</h2> 
+				            <p class="intro">Aplicativo web para el fomento del turismo y crecimiento socioeconómico a gran escala en asocio con la alcaldía del municipio de Zipaquirá. <br> </p>
+				            <a class="btn btn-cta btn-primary" href="http://127.0.0.1:5000/login">Iniciar Sesion</a>
+				            <a class="btn btn-cta btn-primary" href="http://127.0.0.1:5000/singup">Crear Cuenta</a>
+            
+            
+    				        
+    					</div><!--//item-content-inner-->  
+					</div><!--//item-content-->
+				</div><!--//item-->
+				
+				<div class="carousel-item item-2">
+					<div class="item-content container">
+						<div class="item-content-inner">
+    				        
+				            <h2 class="heading"> <br class="d-none d-md-block">Opciones</h2>
+				            <p class="intro">Permite a la alcaldía del municipio generar y actualizar un consolidado para el visitante acerca de los sitios turísticos, información gastronómica, hotelería, centros religiosos, eventos representativos y artesanías disponibles.</p>
+				          
+    				        
+    					</div><!--//item-content-inner-->
+					</div>
+				</div><!--//item-->
+				
+				<div class="carousel-item item-3">
+					<div class="item-content container">
+						<div class="item-content-inner">
+    				        
+				            <h2 class="heading"><br class="d-none d-md-block">Beneficios</h2>
+				            <p class="intro">Lo anterior con el fin de hacer un despliegue a nivel global de la cultura del municipio, permitiendo así que aquellas personas que visten el municipio tengan conocimientos previos de que ruta turística tomar y su experiencia sea satisfactoria tanto para Zipaquirá como para el turista.
+
+				    
+    				        
+    					</div><!--//item-content-inner-->
+					</div>
+				</div><!--//item-->
+
+			</div><!--//carousel-inner-->
+
+		</div><!--//carousel-->
+    </div><!--//hero-->
+
+    
+    
+     <div id="about" class="about-section">
+        <div class="container text-center">
+            <h2 class="section-title"><b>Tecologias Y beneficios</b></h2>
+            <p class="intro">Endurist Tracking utiliza tecnologías frontales modernas y está repleto de componentes y widgets útiles para acelerar su desarrollo.</p>
+            <ul class="technologies list-inline">
+            	<li class="list-inline-item"><img src="static/assets/images/2.png" alt="Sass"  width="60" height="60"></li>
+            	<li class="list-inline-item"><img src="static/assets/images/6.png" alt="Sass"  width="60" height="60"></li>
+                <li class="list-inline-item"><img src="static/assets/images/logo-html5.svg" alt="HTML5"></li>
+                <li class="list-inline-item"><img src="static/assets/images/logo-css3.svg" alt="CSS3"></li>
+                <li class="list-inline-item"><img src="static/assets/images/7.png" alt="Sass"  width="55" height="63"></li>
+                <li class="list-inline-item"><img src="static/assets/images/logo-bootstrap.svg" alt="Bootstrap"></li>
+                <li class="list-inline-item"><img src="static/assets/images/logo-jquery.svg" alt="jQuery"></li>
+            </ul>
+            
+            <div class="items-wrapper row">
+                <div class="item col-md-4 col-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="static/assets/images/figure-1.png" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">Automatizacion Registros</h3>
+                        <div class="item-desc mb-3">
+                            La implementación de tecnologías y lenguajes de programación permite optimizar el registro de las actividades de un Endurista pasando del método manual al uso de un aplicativo web que cuenta con despliegues y alojamiento en AWS. 
+                        </div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="static/assets/images/figure-2.png" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">Lenguajes de Alto Nivel</h3>
+                        <div class="item-desc mb-3">Endurist Tracking contiene en el desarrollo del Backend y Frontend lenguajes y tecnologías de alto nivel como lo es Python con framework de Flask que permite desarrollar aplicaciones web de forma contundente, además se utilizan lenguajes como HTML, CSS Y JS. </div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="static/assets/images/figure-3.png" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">Desarrollo Responsive</h3>
+                        <div class="item-desc mb-3"> El diseño web responsive del aplicativo implementa una técnica de adaptación de mismo lo que busca la correcta visualización de una misma página en distintos dispositivos. Desde ordenadores de escritorio a tablets y móviles.</div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+            </div><!--//items-wrapper-->
+        </div><!--//container-->
+    </div><!--//about-section-->
+  
+    
+    <!-- Javascript -->  
+
+    <script type="text/javascript" src="static/assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
+    <script type="text/javascript" src="static/assets/js/main.js"></script>
+ 
+
+{% endblock %}

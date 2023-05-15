@@ -1,0 +1,113 @@
+
+{% extends 'base.html' %}
+
+{% block title %}SingUp{% endblock %}
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/util.css') }}">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="{{ url_for('static', filename='js/main.js') }}">
+
+<style type="text/css">
+     #no, #hola{
+        display: none;
+    }
+    .txt2 {
+    font-family: Poppins-Regular;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #999999;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="limiter">
+    
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-form-title"  style="background-image: url(./static/images/login.jpg);">
+                <span class="login100-form-title-1">
+                    SingUp
+                </span>
+            </div>
+            {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+            <br />
+            {% for message in messages %}
+            <div class="alert alert-primary alert-dismissible" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+        
+            {% endwith %}
+            <form class="login100-form validate-form" method="POST" action="{{url_for('register')}}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <span class="label-input100">Nombre</span>
+                    <input class="input100" type="text" onclick="ocultarPremio();" title="Digita solo valores alfanumericos" name="nombre" placeholder="" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <span class="label-input100">Correo</span>
+                    <input class="input100"  onclick="ocultarPremio();" onclick="ocultarPremio();" type="email" name="correo" required="" placeholder="" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+                    <span class="label-input100">Contraseña</span>
+                    <input class="input100" type="password" name="pass" required="" placeholder="" onclick="mostrarPremio();" pattern="[A-Za-z0-9!?-]{8,20}" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="flex-sb-m w-full p-b-30" id="hola">
+                    <div>
+                        <p  align = "left"  class="txt2">Mayor a 8 caracteres</p>
+                        <p  align = "left" class="txt2">letras mayúsculas y minúsculas. </p>
+                        <p  align = "left" class="txt2">Incluir números </p>
+                        <p  align = "left" class="txt2">Incluir almenos 1 caracter especial</p>
+                    </div>
+                </div>
+                <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+                    <span class="label-input100">Confirmar Contraseña</span>
+                    <input class="input100" type="password" onclick="ocultarPremio();" name="Cpass"  title="Las contraseñas deben coincidir" required="" placeholder="" >
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="flex-sb-m w-full p-b-30">
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    </div>
+
+                    <div>
+                        <a href="{{ url_for('login') }}" class="txt1">Login</a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button type="password" class="login100-form-btn">Sing Up</button>
+                </div>
+            </form>
+
+            <script type="text/javascript">
+                function mostrarPremio() {
+                    document.getElementById('hola').style.display = 'block';
+                    document.getElementById('hol').style.display = 'none';
+                }
+        
+                function ocultarPremio() {
+                    document.getElementById('hola').style.display = 'none';
+                    document.getElementById('hol').style.display = 'block';
+                }
+        
+            </script>
+        </div>
+    </div>
+</div>
+{% endblock %}
