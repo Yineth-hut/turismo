@@ -1,5 +1,5 @@
-create database turismoZ;
-use turismoZ;
+
+use id20758455_turismoz;
 create table usuario(
 id_Usuario int not null primary key auto_increment,
 nombre_Usuario varchar(50),
