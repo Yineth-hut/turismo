@@ -1,5 +1,8 @@
 
 use turismoz;
+=======
+use id20758455_turismoz;
+>>>>>>> 30704edbe2ba6033af5c01abbfb08d1ac18b2afc
 create table usuario(
 id_Usuario int not null primary key auto_increment,
 nombre_Usuario varchar(50),
