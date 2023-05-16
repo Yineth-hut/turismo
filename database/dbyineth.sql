@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 use id20758455_turismoz;
+=======
+use turismoz;
+>>>>>>> 0afb22a4bfd608b74d89180f37300706119606a3
 create table usuario(
 id_Usuario int not null primary key auto_increment,
 nombre_Usuario varchar(50),
